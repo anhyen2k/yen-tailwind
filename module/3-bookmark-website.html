@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Bookmark Website</title>
+</head>
+
+<body>
+    
+    <div class="w-full min-h-screen bg-slate-100 pb-10">
+        <div class="mx-40 max-xl:mx-20">
+            <!-- navigation -->
+            <div class="flex items-center py-10 max-xl:relative max-xl:justify-center z-10">
+                <img src="../img/bt3-images/logo-bookmark.svg" alt="" class="">
+                <div class="flex items-center ml-auto max-xl:absolute max-xl:top-32 max-xl:mx-auto max-xl:flex-col max-xl:w-full">
+                    <ul id="nav-title" class="flex font-rubik-medium text-sm max-xl:flex-col max-xl:text-center max-xl:w-full max-xl:text-white max-xl:hidden">
+                        <li class="px-4 max-xl:pb-3 max-xl:border-b max-xl:border-slate-400">
+                            <a class="hover:text-red-500" href="">FEATURES</a>
+                        </li>
+                        <li class="px-4 max-xl:py-3 max-xl:border-b max-xl:border-slate-400">
+                            <a class="hover:text-red-500" href="">PRICING</a>
+                        </li>
+                        <li class="px-4 max-xl:py-3 max-xl:border-b max-xl:border-slate-400">
+                            <a class="hover:text-red-500" href="">CONTACT</a>
+                        </li>
+                    </ul>
+                    <button id="btn-nav" class="ml-4 px-7 py-2 font-rubik-medium rounded-xl bg-red-500 border-2 border-red-500 text-white text-sm hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500 max-xl:mx-0 max-xl:bg-inherit max-xl:border-none max-xl:px-3 max-xl:hover:bg-inherit max-xl:hidden">LOGIN</button>
+                </div>
+                <img id="icon-bar" src="../img/bt3-images/icon-hamburger.svg" alt="" class=" xl:hidden ml-auto" onclick="openNavbar()">
+                <img id="icon-x" src="../img/bt3-images/icon-close.svg" alt="" class="xl:hidden hidden ml-auto" onclick="hiddenNavbar()">
+            </div>
+
+            <!-- Simple Bookmark -->
+            <div class="flex justify-around items-center my-20 max-xl:flex-col max-xl:text-center">
+                <div class="max-xl:order-2 max-w-md">
+                    <h2 class="font-rubik-medium text-5xl py-4">A Simple Bookmark Manager</h2>
+                    <p class="text-base-bm py-4">
+                        A clean and simple interface to organize your favourite website. Open a new browser tab and see
+                        your sites load instantly. Try it for free.
+                    </p>
+                    <div class="my-4 flex max-xl:justify-center">
+                        <button class="btn-blue-bm mr-2 whitespace-nowrap">Get it on Chrome</button>
+                        <button class="mx-2 btn-bm whitespace-nowrap bg-slate-300 border-2 border-slate-300 hover:bg-white hover:border-2 hover:border-slate-300 hover:text-slate-600">Get it on Firefox</button>
+                    </div>
+                </div>
+                <img src="../img/bt3-images/illustration-hero.svg" alt="" class="translate-x-50 max-xl:translate-x-0 max-xl:order-1">
+            </div>
+
+            <!-- Features -->
+            <div class="text-center max-w-md mx-auto py-5">
+                <h4 class="title-items-bm py-4">Features</h4>
+                <p class="text-base-bm py-4">
+                    Our aim is to make it quick and easy for you to access your fa vourite website. Your bookmarks sync
+                    between your devices so you can access them on the go.
+                </p>
+            </div>
+
+            <!-- Tab active -->
+            <div class="py-10">
+                <div class="">
+                    <nav class="flex justify-center max-md:flex-col max-md:items-center">
+                        <li id="btn-1" class="list-none p-5 hover-active cursor-pointer" onclick="active1()">
+                            <h4 class="font-rubik-medium text-slate-600 hover:text-red-500 max-md:mx-0">Simple Bookmarking</h4>
+                        </li>
+                        <li id="btn-2" class="list-none p-5 cursor-pointer" onclick="active2()">
+                            <h4 class="font-rubik-medium text-slate-600 hover:text-red-500">Speedy Searching</h4>
+                        </li>
+                        <li id="btn-3" class="list-none p-5 cursor-pointer" onclick="active3()">
+                            <h4 class="font-rubik-medium text-slate-600 hover:text-red-500">Easy Sharing</h4>
+                        </li>
+                    </nav>
+                </div>
+
+                <!-- conten1 tab active -->
+                <div id="content-1" class="flex items-start mt-20 max-lg:flex-col max-lg:items-center max-lg:text-center">
+                    <img src="../img/bt3-images/illustration-features-tab-1.svg" alt="" class="mr-32 max-lg:m-0">
+                    <div class="max-lg:mt-10">
+                        <h4 class="title-items-bm pb-4">Bookmark in ine click</h4>
+                        <p class="text-base-bm py-4">
+                            Organize your bookmarks however you like.Our simple drag-and-drop interface gives you
+                            complete control over how you manage your favourite sites.
+                        </p>
+                        <button class="btn-blue-bm my-4">More Info</button>
+                    </div>
+                </div>
+                <!-- conten2 tab active -->
+                <div id="content-2" class="flex items-start mt-20 hidden max-lg:flex-col max-lg:items-center max-lg:text-center">
+                    <img src="../img/bt3-images/illustration-features-tab-2.svg" alt="" class="mr-32 max-lg:m-0">
+                    <div class="max-lg:mt-10">
+                        <h4 class="title-items-bm pb-4">Intelligent search</h4>
+                        <p class="text-base-bm py-4">
+                            Our powerful search feature will help you find saved sites in no time at all. No need to
+                            traw through all off your bookmarks.
+                        </p>
+                        <button class="btn-blue-bm my-4">More Info</button>
+                    </div>
+                </div>
+                <!-- conten3 tab active -->
+                <div id="content-3" class="flex items-start mt-20 hidden max-lg:flex-col max-lg:items-center max-lg:text-center">
+                    <img src="../img/bt3-images/illustration-features-tab-3.svg" alt="" class="mr-32 max-lg:m-0">
+                    <div class="max-lg:mt-10">
+                        <h4 class="title-items-bm pb-4">Share your bookmarks</h4>
+                        <p class="text-base-bm py-4">
+                            Easily share your bookmarks and collections with others. Create a shareable a link that you
+                            can send at the click of a button.
+                        </p>
+                        <button class="btn-blue-bm my-4">More Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dowload extension -->
+            <div class="">
+                <div class="text-center max-w-md mx-auto py-5">
+                    <h4 class="title-items-bm py-4">Dowload the extension</h4>
+                    <p class="text-base-bm py-4">
+                        We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd
+                        like us to prioritize.
+                    </p>
+                </div>
+                <!-- Extension items -->
+                <div class="flex mx-auto w-fit py-10 max-lg:flex-col max-lg:py-14">
+                    <div class="extension-item h-fit">
+                        <img src="../img/bt3-images/logo-chrome.svg" alt="" class="mx-auto my-5">
+                        <div class="">
+                            <h2 class="font-rubik-medium">Add to Chrome</h2>
+                            <p class="extension-content">Minimum version 62</p>
+                        </div>
+                        <button class="extension-btn">Add & Install Extension</button>
+                    </div>
+
+                    <div class="extension-item mt-8 h-fit max-lg:mt-16">
+                        <img src="../img/bt3-images/logo-firefox.svg" alt="" class="mx-auto my-5">
+                        <div class="">
+                            <h2 class="font-rubik-medium">Add to Firefox</h2>
+                            <p class="extension-content">Minimum version 62</p>
+                        </div>
+                        <button class="extension-btn">Add & Install Extension</button>
+                    </div>
+
+                    <div class="extension-item mt-16">
+                        <img src="../img/bt3-images/logo-opera.svg" alt="" class="mx-auto my-5">
+                        <div class="">
+                            <h2 class="font-rubik-medium">Add to Opera</h2>
+                            <p class="extension-content">Minimum version 55</p>
+                        </div>
+                        <button class="extension-btn">Add & Install Extension</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frequently Asked Questions -->
+            <div class="max-w-lg mx-auto my-5 text-center">
+                <div class="text-center">
+                    <h2 class="title-items-bm my-4">Frequently Asked Questions</h2>
+                    <p class="text-base-bm my-4">Here are some of our FAQs. If you have any other questions you'd like
+                        answered please feel
+                        free to email us.</p>
+                </div>
+                <!-- drop-down question -->
+                <div class="">
+                    <div class="mt-10 py-4 border-y border-slate-300">
+                        <div class="flex items-center">
+                            <p class="font-rubik-light text-base text-slate-700 hover:text-red-500">What is Bookmark?</p>
+                            <img src="../img/bt3-images/icon-arrow.svg" alt=""
+                                class="ml-auto px-3 toggle-btn">
+                        </div>
+                        <p class="text-base-bm py-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, assumenda
+                            perferendis dolores modi magnam explicabo hic ad minus facere consequatur officia reiciendis
+                            perspiciatis ut ratione enim provident fugiat laudantium voluptatem.
+                        </p>
+                    </div>
+
+                    <div class="py-4 border-b border-slate-300">
+                        <div class="flex items-center">
+                            <p class="font-rubik-light text-slate-700 text-base hover:text-red-500">How can I request a new browser?</p>
+                            <img src="../img/bt3-images/icon-arrow.svg" alt=""
+                                class="ml-auto px-3 text-slate-700 toggle-btn">
+                        </div>
+                        <p class="text-base-bm py-4 hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, assumenda
+                            perferendis dolores modi magnam explicabo hic ad minus facere consequatur officia reiciendis
+                            perspiciatis ut ratione enim provident fugiat laudantium voluptatem.
+                        </p>
+                    </div>
+
+                    <div class="py-4 border-b border-slate-300">
+                        <div class="flex items-center">
+                            <p class="font-rubik-light text-slate-700 text-base hover:text-red-500">Is there a mobile app?</p>
+                            <img src="../img/bt3-images/icon-arrow.svg" alt=""
+                                class="ml-auto px-3 text-slate-700 toggle-btn">
+                        </div>
+                        <p class="text-base-bm py-4 hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, assumenda
+                            perferendis dolores modi magnam explicabo hic ad minus facere consequatur officia reiciendis
+                            perspiciatis ut ratione enim provident fugiat laudantium voluptatem.
+                        </p>
+                    </div>
+
+                    <div class="py-4 border-b border-slate-300">
+                        <div class="flex items-center">
+                            <p class="font-rubik-light text-slate-700 text-base hover:text-red-500">What about other Chromium browsers?</p>
+                            <img src="../img/bt3-images/icon-arrow.svg" alt=""
+                                class="ml-auto px-3 text-slate-700 toggle-btn">
+                        </div>
+                        <p class="text-base-bm py-4 hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, assumenda
+                            perferendis dolores modi magnam explicabo hic ad minus facere consequatur officia reiciendis
+                            perspiciatis ut ratione enim provident fugiat laudantium voluptatem.
+                        </p>
+                    </div>
+                </div>
+                <button class="btn-blue-bm my-10">More Info</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact us -->
+    <div class="w-full bg-blue-700 py-10">
+        <div class="max-w-md mx-auto text-center">
+            <h5 class="font-rubik-medium tracking-[0.4em] text-white text-xs py-5">35.000+ ALREADY JOINED</h5>
+            <h4 class="title-items-bm py-5 text-white">Stay up-to-date with what we're doing</h4>
+            <div class="my-5 flex items-center max-sm:flex-col">
+                <input type="text" placeholder="Enter your email address"
+                    class="flex-1 mr-2 px-3 py-3 rounded-lg outline-none placeholder:font-rubik-regular placeholder:text-sm max-sm:mx-0 max-sm:mb-2">
+                <button class="flex-1 ml-2 px-5 py-3 font-rubik-medium rounded-lg bg-red-600 hover:bg-red-500 text-white max-sm:mx-0 max-sm:mt-2">Contact Us</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-slate-800">
+        <div class="mx-40 py-10 flex items-center max-lg:mx-20 max-sm:mx-10 max-sm:flex-col max-sm:text-center">
+            <img src="../img/bt3-images/logo-bookmark-footer.svg" alt="" class="pr-10 max-sm:px-0 max-sm:pb-5">
+            <ul class="font-rubik-medium text-white flex items-center max-sm:flex-col">
+                <li class="mx-4 max-sm:p-5">
+                    <a href="" class="hover:text-red-500">FEATURE</a>
+                </li>
+                <li class="mx-4 max-sm:p-5">
+                    <a href="" class="hover:text-red-500">PRICING</a>
+                </li>
+                <li class="mx-4 max-sm:p-5">
+                    <a href="" class="hover:text-red-500">CONTACT</a>
+                </li>
+            </ul>
+            <div class="flex items-center ml-auto max-sm:m-auto max-sm:p-5">
+                <div class="text-white hover:text-red-500 pr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+                    </svg>
+                </div>
+                <div class="text-white hover:text-red-500 pl-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path fill="currentColor" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="bg-slate-700 fixed top-0 right-0 left-0 bottom-0 opacity-60 z-[9] hidden"></div>
+
+    <script type="text/javascript">
+        var btn1 = document.querySelector('#btn-1')
+        var btn2 = document.querySelector('#btn-2')
+        var btn3 = document.querySelector('#btn-3')
+        var content1 = document.querySelector('#content-1')
+        var content2 = document.querySelector('#content-2')
+        var content3 = document.querySelector('#content-3')
+
+        function active1() {
+            if (!btn1.classList.contains('hover-active')) {
+                btn1.classList.add('hover-active')
+                btn2.classList.remove('hover-active')
+                btn3.classList.remove('hover-active')
+                content1.classList.remove('hidden')
+                content2.classList.add('hidden')
+                content3.classList.add('hidden')
+            }
+
+        }
+        function active2() {
+            if (!btn2.classList.contains('hover-active')) {
+                btn2.classList.add('hover-active')
+                btn1.classList.remove('hover-active')
+                btn3.classList.remove('hover-active')
+                content1.classList.add('hidden')
+                content2.classList.remove('hidden')
+                content3.classList.add('hidden')
+            }
+        }
+        function active3() {
+            if (!btn3.classList.contains('hover-active')) {
+                btn3.classList.add('hover-active')
+                btn1.classList.remove('hover-active')
+                btn2.classList.remove('hover-active')
+                content1.classList.add('hidden')
+                content2.classList.add('hidden')
+                content3.classList.remove('hidden')
+            }
+        }
+
+        let navTitle = document.getElementById("nav-title");
+        let iconX = document.getElementById("icon-x");
+        let iconBar = document.getElementById("icon-bar");
+        let btnNav = document.getElementById("btn-nav")
+        let overlay = document.getElementById('overlay')
+
+        function openNavbar() {
+            navTitle.classList.remove('max-xl:hidden');
+            btnNav.classList.remove('max-xl:hidden');
+            overlay.classList.remove('hidden')
+            iconX.classList.remove('hidden')
+            iconBar.classList.add('hidden')
+        }
+
+        function hiddenNavbar() {
+            navTitle.classList.add("max-xl:hidden");
+            btnNav.classList.add("max-xl:hidden");
+            overlay.classList.add('hidden')
+            iconX.classList.add('hidden')
+            iconBar.classList.remove('hidden')
+        }
+    </script>
+</body>
+</html>

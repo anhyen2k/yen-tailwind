@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Image Gallery</title>
+</head>
+
+<body>
+    <div class="w-full h-screen bg-img-ct flex justify-center items-center">
+        <div class="w-8/10 h-800 bg-white rounded-xl">
+            <!-- Navigation -->
+            <div class="flex justify-end max-md:justify-center max-md:items-center max-md:block">
+                <ul class="w-full h-full my-20 flex justify-end gap-3 pt-11 pr-50 max-md:pr-0 max-md:block max-md:text-center max-md:my-6 max-md:pt-0">
+                    <li class="my-3">
+                        <a href="" class="max-md:m-auto hover:border-b-2 hover:border-solid border-slate-950">Vector</a>
+                    </li>
+                    <li class="my-3">
+                        <a href="" class="max-md:m-auto hover:border-b-2 hover:border-solid border-slate-950">Illustrations</a>
+                    </li>
+                    <li class="my-3">
+                        <a href="" class="max-md:m-auto hover:border-b-2 hover:border-solid border-slate-950">Images</a>
+                    </li>
+                    <li class="my-3 max-md:mb-0">
+                        <a href="" class="max-md:m-auto hover:border-b-2 hover:border-solid border-slate-950">Icon</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="inline-block w-full px-50 py-3.5">
+                <!-- Search -->
+            <div class="relative w-4/6 inline-block max-md:block max-md:w-full max-md:flex max-md:justify-center items-center max-md:pb-4">
+                <input class="font-light pl-4 pr-10 py-2 w-64 focus:border border-gray-300 rounded-lg focus:outline-none text-slate-300" type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass text-slate-300"></i>
+            </div>
+            <!-- Upload -->
+            <div class="float-right max-md:flex max-md:justify-center max-md:float-none">
+                <button class=" w-138 h-12 bg-black text-white rounded-lg ">Upload</button>
+            </div>
+            </div>
+            <!-- Images -->
+            <div class="flex justify-center mx-50 py-3.5">
+                <div class="grid grid-cols-5 gap-3.5 m-auto max-xl:grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-1">
+                    <img src="../img/list-images/image1.jpg" alt="" class="">
+                    <img src="../img/list-images/image2.jpg" alt="" class="">
+                    <img src="../img/list-images/image3.jpg" alt="" class="">
+                    <img src="../img/list-images/image4.jpg" alt="" class="">
+                    <img src="../img/list-images/image5.jpg" alt="" class="">
+                    <img src="../img/list-images/image6.jpg" alt="" class="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

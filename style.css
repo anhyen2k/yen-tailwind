@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+
+@layer base {
+    @font-face {
+        font-family: 'BarlowSemiCondensed';
+        src: url('./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf') ;
+      };
+      @font-face {
+          font-family: 'BarlowSemiCondensed Regular';
+          src: url('./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf') ;
+          font-size: 0.95rem;
+        };
+        /* fonts bt1 */
+      @font-face {
+        font-family: 'Jamjuree-SemiBold';
+        src: url('./fonts/Bai1_Jamjuree/BaiJamjuree-SemiBold.ttf') ;
+      };
+      @font-face {
+        font-family: 'Jamjuree-Light';
+        src: url('./fonts/Bai1_Jamjuree/BaiJamjuree-Light.ttf') ;
+      };
+      @font-face {
+        font-family: 'Jamjuree-Regular';
+        src: url('./fonts/Bai1_Jamjuree/BaiJamjuree-Regular.ttf') ;
+      };
+      /* fonts bt2 */
+      @font-face {
+        font-family: 'Poppins-Bold';
+        src: url('./fonts/Bai2_Poppins/Poppins-Bold.ttf') ;
+      };
+      @font-face {
+        font-family: 'Poppins-Light';
+        src: url('./fonts/Bai2_Poppins/Poppins-Light.ttf') ;
+      };
+      @font-face {
+        font-family: 'Poppins-ExtraLightItalic';
+        src: url('./fonts/Bai2_Poppins/Poppins-ExtraLightItalic.ttf') ;
+      };
+      @font-face {
+        font-family: 'Poppins-Italic';
+        src: url('./fonts/Bai2_Poppins/Poppins-Italic.ttf') ;
+      };
+      /* fonts bt3 */
+      @font-face {
+        font-family: 'Rubik-Regular';
+        src: url('./fonts/Bai3_Rubik/Rubik-Regular.ttf') ;
+      };
+      @font-face {
+        font-family: 'Rubik-Bold';
+        src: url('./fonts/Bai3_Rubik/Rubik-Bold.ttf') ;
+      };
+      @font-face {
+        font-family: 'Rubik-Medium';
+        src: url('./fonts/Bai3_Rubik/Rubik-Medium.ttf') ;
+      };
+      @font-face {
+        font-family: 'Rubik-Light';
+        src: url('./fonts/Bai3_Rubik/Rubik-Light.ttf') ;
+      };
+}
+
+.img {
+    @apply max-w-56 max-h-44
+}
+
+/* Testmonial Grid */
+.ctn-imgs {
+    @apply border border-2 border-white rounded-full
+}
+
+.items-ctn {
+    @apply flex items-center pb-5
+}
+.ct-h4 {
+    @apply text-white text-2xl font-medium leading-10
+}
+
+/* Clipboard Website */
+.title-ct {
+    @apply font-jamjuree-semibold text-4xl my-7
+}
+
+.title-small {
+    @apply font-jamjuree-semibold text-2xl my-2
+}
+
+.title-small-item {
+    @apply font-jamjuree-semibold text-2xl mb-5
+}
+
+.btn {
+    @apply font-jamjuree-light px-5 py-4 rounded-full m-1 text-white text-xl
+}
+
+.content-center {
+    @apply flex justify-center text-center
+}
+
+.contents {
+    @apply font-jamjuree-light text-xl my-5 text-slate-500
+}
+
+.img-icons {
+    @apply mx-20 w-auto max-sm:w-3/12 max-sm:mx-auto
+}
+
+/* bt2 */
+
+.content-base {
+  @apply font-poppins-light text-slate-400
+}
+
+.button {
+    @apply px-8 py-3 font-poppins-bold
+}
+
+.button-teal {
+    @apply px-8 py-3 bg-teal-500 hover:bg-teal-400 rounded-full text-white font-poppins-bold
+}
+
+.button-teal-lg {
+    @apply px-8 py-3 font-poppins-bold text-white bg-teal-500 hover:bg-teal-400 rounded-lg
+}
+
+.shorten-ctn {
+  @apply w-auto h-auto flex items-center my-3 p-8 bg-white rounded-lg max-lg:flex-col
+}
+
+.shorten-link {
+  @apply overflow-scroll font-poppins-bold
+}
+
+.shorten-ctn-l {
+  @apply flex items-center ml-auto max-lg:flex-col max-lg:w-full
+}
+
+.shorten-ctn-l-item {
+  @apply font-poppins-bold mx-2
+}
+
+.content-item {
+  @apply w-1/4 bg-white rounded-lg mx-5 pr-10 pl-5 relative flex flex-col max-lg:w-full max-lg:items-center
+}
+
+.content-item-icons {
+  @apply w-20 h-20 bg-slate-950 flex justify-center items-center rounded-full absolute -top-10
+}
+
+.content-item-title {
+  @apply font-poppins-bold mt-20 mb-5
+}
+
+/* bt3 */
+
+.btn-bm {
+  @apply px-5 py-3 font-rubik-medium rounded-lg
+}
+
+.text-base-bm {
+  @apply font-rubik-light text-slate-400 text-base
+}
+
+.title-items-bm {
+  @apply text-3xl font-rubik-medium
+}
+
+.hover-active {
+  @apply border-b-2 border-red-500
+}
+
+.extension-item {
+  @apply text-center bg-white rounded-lg mx-5 shadow-lg
+}
+
+.extension-content {
+  @apply text-base-bm pt-4 pb-8 border-b-4 border-dotted border-slate-300
+}
+
+.btn-blue-bm {
+  @apply btn-bm text-white bg-blue-800 border-2 border-blue-800 hover:bg-white hover:border-2 hover:border-blue-800 hover:text-blue-800
+}
+.extension-btn {
+  @apply btn-blue-bm my-5 whitespace-nowrap mx-4
+}
